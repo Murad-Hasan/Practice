@@ -1,6 +1,5 @@
-//finding out the length of a string
-
 #include <stdio.h>
+#include <string.h>
 
 //array of strings
 
@@ -40,8 +39,9 @@ int array_of_strings(){
     return 0;
 }
 
+//finding out the length of a string
 
-int main(void){
+int string_length_calculation(){
     char str1 [] = "To be or not to be";
     char str2 [] = ",that is the question";
     unsigned int count = 0;
@@ -57,8 +57,35 @@ int main(void){
         ++count;
 
     printf("The length of the string \"%s\" is %d characters. \n ", str2, count);
+}
+
+
+
+//coping a string
+
+    int copying_string (){
+        char source[] = "Hello World";
+        char destination[50];
+        if (strcpy_s(destination, sizeof(destination), source));
+            // printf("An error occurred copying the string.\n");
+            printf("%s\n", destination);
+    }
+
+//copying string with specific length
+
+    int copying_string_with_specific_number(){
+    char source2[] = "Today i have political economic class at 12:00 PM";
+        char destination2[50];
+        if(strcpy_s(destination2, sizeof(destination2), source2, 17));
+            printf("%s", destination2);
+    }
+
+int main(void){
+    // string_length_calculation();
     // char_outPut();
-    array_of_strings();
+    // array_of_strings();
+    copying_string();
+    copying_string_with_specific_number();
     return 0;
 }
 
