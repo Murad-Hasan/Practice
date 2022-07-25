@@ -76,7 +76,7 @@ int string_length_calculation(){
     int copying_string_with_specific_number(){
     char source2[] = "Today i have political economic class at 12:00 PM\0";
         char destination2[50];
-        if(strcpy_s(destination2, sizeof(destination2), source2, 17));
+        if(strncpy_s(destination2, sizeof(destination2), source2, 22));
             printf("%s", destination2);
     }
 
