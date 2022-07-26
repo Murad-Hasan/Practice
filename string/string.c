@@ -66,7 +66,7 @@ int string_length_calculation(){
     int copying_string (){
         char source[] = "Hello World";
         char destination[50];
-        if (strcpy_s(destination, sizeof(destination), source));
+        if (strcpy_s(destination,sizeof(destination), source));
             // printf("An error occurred copying the string.\n");
             printf("%s\n", destination);
     }
@@ -76,16 +76,33 @@ int string_length_calculation(){
     int copying_string_with_specific_number(){
     char source2[] = "Today i have political economic class at 12:00 PM\0";
         char destination2[50];
-        if(strncpy_s(destination2, sizeof(destination2), source2, 22));
-            printf("%s", destination2);
+        if(strncpy_s(destination2, sizeof(destination2), source2, 22))
+            printf("An error occurred copying the string.\n");
+        else
+            printf("%s\n", destination2);
     }
+
+
+//concatenating strings
+    int concatenating_strings(){
+        char str11[50] = "To be , or not to be\t";
+        char str22[] = "that is the question";
+        // int concate = strcat_s(str11, sizeof(str11), str22);
+
+        if (strcat_s(str11, sizeof(str11), str22))
+            printf("An error occurred concatenating the strings.\n");
+        else
+            printf("%s\n", str11);
+    }
+
 
 int main(void){
     // string_length_calculation();
     // char_outPut();
     // array_of_strings();
-    copying_string();
+    // copying_string();
     copying_string_with_specific_number();
+    concatenating_strings();
     return 0;
 }
 
