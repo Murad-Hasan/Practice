@@ -95,6 +95,7 @@ int string_length_calculation(){
             printf("%s\n", str11);
     }
 
+ // strcpy , strcat  return 0 on success and non-zero on failure
 
 int main(void){
     // string_length_calculation();
